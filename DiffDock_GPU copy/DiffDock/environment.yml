@@ -1,0 +1,7 @@
+name: DiffDock
+channels:
+  - pytorch
+  - defaults
+dependencies: 
+  - python=3.9.13
+  - pip=22.2.2

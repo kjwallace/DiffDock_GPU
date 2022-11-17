@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+    app:
+        build: .
+        image: diffdock
+        volumes:
+            - ./data:/home/data
+        stdin_open: true
+        tty: true
