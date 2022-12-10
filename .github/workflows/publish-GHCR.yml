@@ -22,6 +22,6 @@ username: ${{ github.actor }}
 password: ${{ secrets.GITHUB_TOKEN }}
 - name: Build the Diffdock Image
 run: 
-    docker build -t kjwallace/diffdock_gpu:latest --rm -f DiffDock_GPU/Dockerfile_Github .
-    docker run kjwallace/diffdock_gpu:latest
-    docker push kjwallace/diffdock_gpu:latest
+    docker build -t ghcr.io/kjwallace/diffdock_gpu:latest --rm -f DiffDock_GPU/Dockerfile_Github .
+    docker run ghcr.io/kjwallace/diffdock_gpu:latest
+    docker push ghcr.io/kjwallace/diffdock_gpu:latest
