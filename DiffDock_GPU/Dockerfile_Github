@@ -36,7 +36,7 @@ ENV CONDA_DEFAULT_ENV $DiffDock
 
 #install torch specific packages
 RUN pip install --upgrade pip 
-COPY .DiffDock_GPU/DiffDock/requirements_docker_GPU.txt ./
+COPY ./DiffDock_GPU/DiffDock/requirements_docker_GPU.txt ./
 
 RUN pip install --no-cache-dir torch==1.13.0 torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
 RUN pip install --no-cache-dir -r ./requirements_docker_GPU.txt
@@ -45,7 +45,7 @@ RUN pip install torch-scatter torch-sparse -f https://data.pyg.org/whl/torch-1.1
 RUN pip install torch-geometric torch-cluster -f https://data.pyg.org/whl/torch-1.13.0+cu116.html
 
 
-COPY .DiffDock_GPU/DiffDock ./
+COPY ./DiffDock_GPU/DiffDock ./
 
 RUN pip install -e ./esm/.
 
