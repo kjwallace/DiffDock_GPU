@@ -10,17 +10,18 @@ on:
     branches: [ "main" ]
 
 jobs:
-  publish-image:
-    runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkouT@V3
-        - name: Login to Github Container Registry 
-        uses: docker/login-action@v1
-        with:
-          registry: ghcr.io 
-            username: ${{ github.actor }}
-            password: ${{ secrets.GITHUB_TOKEN }}
-              - name: Build the Diffdock Image
-              run: docker build -t kjwallace/diffdock_gpu:latest --rm -f DiffDock_GPU/Dockerfile_Github .
-              docker run kjwallace/diffdock_gpu:latest
-              docker push kjwallace/diffdock_gpu:latest
+publish-image:
+runs-on: ubuntu-latest
+steps:
+    - uses: actions/checkouT@V3
+    - name: Login to Github Container Registry 
+uses: docker/login-action@v1
+with:
+registry: ghcr.io 
+username: ${{ github.actor }}
+password: ${{ secrets.GITHUB_TOKEN }}
+- name: Build the Diffdock Image
+run: 
+    docker build -t kjwallace/diffdock_gpu:latest --rm -f DiffDock_GPU/Dockerfile_Github .
+    docker run kjwallace/diffdock_gpu:latest
+    docker push kjwallace/diffdock_gpu:latest
