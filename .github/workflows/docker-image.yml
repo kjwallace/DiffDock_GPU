@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build -t DiffDock -f DiffDock_GPU/Dockerfile_GPU_1_13 .
+      run: docker build -t diffdock_gpu -f DiffDock_GPU/Dockerfile_GPU_1_13 .
