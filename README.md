@@ -7,10 +7,13 @@ It was copied over here and not forked in order to enable some restructuring of 
 
 ### CPU 
 Very slow.
-Adding exact commands soon.
+Will add instructions for set up soon.
 
 
 ### GPU 
 Only works on Cuda.
 Make sure you have your drivers installed.
-Will add excat build commands soon.
+Will add instructions for set up soon. 
+
+### Inference 
+Will add instructions soon.
