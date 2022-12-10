@@ -5,20 +5,18 @@ name: Publish
 # separate terms of service, privacy policy, and support
 # documentation.
 
-on:
-  push:
-    branches: [ "main" ]
+on: [ push ]
 
 jobs:
-publish-image:
-runs-on: ubuntu-latest
-steps:
-    - uses: actions/checkouT@V3
+  publish-image:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@V3
     - name: Login to Github Container Registry 
 uses: docker/login-action@v1
 with:
 registry: ghcr.io 
-username: ${{ github.actor }}
+username: kjwallace
 password: ${{ secrets.GITHUB_TOKEN }}
 - name: Build the Diffdock Image
 run: 
