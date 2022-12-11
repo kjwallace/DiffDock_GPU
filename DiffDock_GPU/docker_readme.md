@@ -3,9 +3,11 @@ GPU Instructions:
 Navigate to the directory containing Dockerfile_GPU_2
 
 run 
-  ' docker build -f diffdock —rm -f Dockerfile_GPU .'
+  ' docker build -t diffdock —rm -f Dockerfile_GPU .'
   
 attach the container with a GPU such that you can interact with the terminal 
+
+docker run --name kellyd73-diffdock-test-2 --gpus=all -it -p 5000:5000 --group-add video kellyd73-diffdock-test:latest
 
 generates embeddings 
 
@@ -23,7 +25,7 @@ inference:
 CPU:
 
   ' docker build -f diffdock —rm -f Dockerfile_GPU . '
-  'docker-compose run --rm app'
+  'docker compose run --rm app'
   
   
   
