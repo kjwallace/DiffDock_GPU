@@ -8,6 +8,7 @@ run
 attach the container with a GPU such that you can interact with the terminal 
 
 docker run --name kellyd73-diffdock-test-2 --gpus=all -it -p 5000:5000 --group-add video kellyd73-diffdock-test:latest
+add volume
 
 generates embeddings 
 
