@@ -5,7 +5,11 @@ name: Publish
 # separate terms of service, privacy policy, and support
 # documentation.
 
-on: [ push ]
+on: 
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   publish-image:
